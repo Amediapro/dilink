@@ -53,3 +53,8 @@ body {
 .nav-bar li {
 	float: left
 }
+
+.carousel-inner>.item>img, .carousel-inner>.item>a>img {
+	width: 15%;
+	margin: auto;
+}
