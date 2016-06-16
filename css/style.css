@@ -1,0 +1,55 @@
+@CHARSET "UTF-8";
+
+@font-face {
+	font-family: Lato;
+	src: url(fonts/Lato-Regular.ttf);
+}
+
+body {
+	font-family: Lato;
+	font-size: 14px;
+	background-color: #bb9776;
+}
+
+.upper-line {
+	background: #3b372e;
+	position: relative;
+	margin-top: 0;
+	padding: 6px 0;
+}
+
+.site-types {
+	color: rgb(255, 255, 255);
+	position: relative;
+	left: 5%;
+	float: left;
+}
+
+.company-phone {
+	color: rgb(255, 255, 255);
+	position: relative;
+	right: 5%;
+	float: right;
+}
+
+.logo {
+	text-align: center;
+	width: 10%;
+	float: left;
+	margin-left: 10%;
+	margin-top: 2%;
+}
+
+.nav {
+	width: 80%;
+	text-align: center;
+}
+
+.nav-bar {
+	list-style: none;
+	display: inline-block;
+}
+
+.nav-bar li {
+	float: left
+}
