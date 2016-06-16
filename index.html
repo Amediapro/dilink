@@ -30,10 +30,11 @@
 body {
 	font-family: Lato;
 	font-size: 14px;
+	background-color: #bb9776;
 }
 
-.header {
-	background-image: url("img/header.png");
+.upper-line {
+	background: #3b372e;
 	position: relative;
 	left: 0px;
 	top: 0px;
@@ -42,7 +43,7 @@ body {
 	padding: 6px 0;
 }
 
-.header-text {
+.site-types {
 	color: rgb(255, 255, 255);
 	line-height: 1.2;
 	text-align: left;
@@ -85,27 +86,50 @@ body {
 </style>
 </head>
 <body>
-	<div class="content-wraper">
-		<!-- зеленый див -->
-		<div>
-			<!-- красный див -->
-			<div class="header">
-				<!-- оранжевый див -->
-				<span class="header-text">Частным клиентам | Бизнесу</span><span
-					class="company-phone">8-800-444-444-44 | 95-95-59</span>
-			</div>
-			<div>
-				<!-- навбар -->
-				<div>
-					<!-- розовый див -->
-					<div>
-						<!-- logo -->
-						<a href=""><span class="dilink"></span><span></span></a>
-					</div>
+	<div class="header">
+		<div class="upper-line">
+			<span class="site-types">Частным клиентам | Бизнесу</span> <span
+				class="company-phone">8-800-444-444-44 | 95-95-59</span>
+		</div>
+		<div class="main-nav-wraper">
+			<div class="main-nav">
+				<div class="logo">
+					<a href=""><span class="dilink">Dilink</span><span class="call-center">КОНТАКТНЫЙ ЦЕНТР</span>
+					</a>
+				</div>
+				<div class="nav">
+					<ul>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+				</div>
+				<div class="nav-panel">
+					<span></span> <span></span>
 				</div>
 			</div>
-			<div></div>
 		</div>
+		<div id="slider-wrap">
+			<div id="slider">
+				<div class="slide slide_img">
+					<a href=""></a>
+				</div>
+				<div class="slide slide_img">
+					<a href=""></a>
+				</div>
+				<div class="slide slide_img">
+					<a href=""></a>
+				</div>
+			</div>
+		</div>
+		<!-- ________________ КОНЕЦ СЛАЙДЕР ____________________ -->
+		<a href="javascript: void(0)" id="prev_slide" class="arrows">←</a> <a
+			href="javascript: void(0)" id="next_slide" class="arrows">→</a>
 	</div>
+	<div class="content-wraper">
+		<div class="block-1"></div>
+	</div>
+	<div class="footer"></div>
 </body>
 </html>
