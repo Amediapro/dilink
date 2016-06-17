@@ -187,6 +187,33 @@ td,
 th {
   padding: 0;
 }
+.main-nav {
+	padding: 6px 0;
+	position: relative;
+
+}
+.main-nav div {
+	position: absolute;
+}
+.main-nav .logo {
+	left: 15%;
+	width: 10%;
+}
+.main-nav .nav {
+	left: 25%;
+	right: 25%;
+	margin: auto;
+	text-align: center;
+}
+.main-nav .nav-right {
+	right: 15%;
+	width: 10%;
+}
+
+
+
+
+
 /*! Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css */
 @media print {
   *,
