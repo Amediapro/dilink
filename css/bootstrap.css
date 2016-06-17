@@ -4356,8 +4356,11 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 @media (min-width: 768px) {
   .navbar-nav {
-    float: left;
-    margin: 0;
+	float: left;
+	margin: 0;
+	font-family: "Lato Regular";
+	font-style: normal;
+	font-size: 14px;
   }
   .navbar-nav > li {
     float: left;

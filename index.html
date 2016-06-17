@@ -17,83 +17,70 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<!-- <script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> -->
+<script src="js/jquery-1.11.3.min.js"></script>
+
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="js/bootstrap.js"></script>
 
 <style>
-  
-  </style>
+</style>
 </head>
 <body class="container-fluid">
-	<div class="header">
-		<div class="row upper-line">
-			<span class="site-types">Частным клиентам | Бизнесу</span> <span
+	<div class="cont">
+		<div class="upper-line row">
+			<span class="site-types"><a href="#">Частным клиентам</a> | <a href="#" class="active">Бизнесу</a></span> <span
 				class="company-phone">8-800-444-444-44 | 95-95-59</span>
 		</div>
-		<div class="main-nav-wraper">
+		<div class="container">
 			<div class="main-nav">
 				<div class="logo">
 					<img src="img/logo.png">
 				</div>
-				<div class="nav">
-					<ul class="nav-bar">
+				<div class="nav col-md-6">
+					<ul class="nav nav-bar">
 						<li><a>О Нас</a></li>
 						<li><a>Услуги</a></li>
 						<li><a>События</a></li>
 						<li><a>Контакты</a></li>
 					</ul>
 				</div>
-				<div class="nav-panel">
-					<span></span> <span></span>
-				</div>
-			</div>
+</div>
 		</div>
-		<hr width="85%">
-		<div id="myCarousel" class="carousel slide" data-ride="carousel">
-			<!-- Wrapper for slides -->
+		<hr width="85%" class="col-md-10 col-md-offset-1">
+		<div id="carousel1" class="carousel slide col-md-offset-1 col-md-10"
+			data-ride="carousel">
 			<div class="carousel-inner" role="listbox">
 				<div class="item active">
-					<img src="img/all-time.png">
+					<img src="img/all-time.png" alt="First slide image"
+						class="center-block">
+					<div class="carousel-caption"></div>
 				</div>
-
 				<div class="item">
-					<img
-						src="img/work-at.png">
+					<img src="img/work-at.png" alt="Second slide image"
+						class="center-block">
+					<div class="carousel-caption"></div>
 				</div>
-
 				<div class="item">
-					<img src="img/time.png">
+					<img src="img/time.png" alt="Third slide image"
+						class="center-block">
+					<div class="carousel-caption"></div>
 				</div>
-
 			</div>
-
-			<!-- Left and right controls -->
-			<a class="left carousel-control" href="#myCarousel" role="button"
-				data-slide="prev"><img src="img/left-arrow.png">
-			</a> <a class="right carousel-control" href="#myCarousel" role="button"
-				data-slide="next"><img src="img/right-arrow.png">
-			</a>
+			<a class="left carousel-control" href="#carousel1" role="button"
+				data-slide="prev"><span class="glyphicon glyphicon-chevron-left"
+				aria-hidden="true"></span><span class="sr-only">Previous</span></a><a
+				class="right carousel-control" href="#carousel1" role="button"
+				data-slide="next"><span
+				class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span><span
+				class="sr-only">Next</span></a>
 		</div>
-<!-- 		<div id="slider-wrap"> -->
-<!-- 			<div id="slider"> -->
-<!-- 				<div class="slide slide_img"> -->
-<!-- 					<a href=""></a> -->
-<!-- 				</div> -->
-<!-- 				<div class="slide slide_img"> -->
-<!-- 					<a href=""></a> -->
-<!-- 				</div> -->
-<!-- 				<div class="slide slide_img"> -->
-<!-- 					<a href=""></a> -->
-<!-- 				</div> -->
-<!-- 			</div> -->
-<!-- 		</div> -->
-<!-- 		<!-- ________________ КОНЕЦ СЛАЙДЕР ____________________ -->
-<!-- 		<a href="javascript: void(0)" id="prev_slide" class="arrows">←</a> <a -->
-<!-- 			href="javascript: void(0)" id="next_slide" class="arrows">→</a> -->
+		<div class="col-md-10">
+			<button type="button" class="btn btn-default">Default Button</button>
+		</div>
 	</div>
-	<div class="content-wraper">
+	<div class="col-md-12">
 		<div class="block-1"></div>
 	</div>
 	<div class="footer"></div>
