@@ -53,13 +53,38 @@ body {
 }
 
 .logo {
-	margin-left: 0px;
 	left: 0;
-	width: 15%;
+	margin-left: 0px;
+	float: left;
+	width: 20%
 }
 
-.nav {
+.navigation {
+	float: left;
 	text-align: center;
+	width: 60%;
+	margin-bottom: 0;
+	font-size: 1.711em;
+	padding-top: 20px;
+}
+
+.main_nav-control-panel {
+	float: left;
+	width: 20%;
+	padding-top: 30px;
+}
+.btn .btn-default {
+	background-image: url(../img/btn.png);
+	background-color: #AFA296;
+}
+
+
+.main_nav {
+	margin: 0 auto;
+	width: 80%;
+	padding-top: 30px;
+	padding-right: 0;
+	padding-left: 0;
 }
 
 .nav-bar {
@@ -166,4 +191,21 @@ body {
 	margin-left: auto;
 	margin-bottom: 0;
 	width: 80%;
+}
+
+.nav .img-left {
+	float: left;
+}
+.nav-btn {
+	width: 24px;
+}
+.main_nav-control-panel img {
+	width: 32px;
+	height: 32px;
+}
+.btn-default  {
+	color: #ffffff;
+	background-color: #AFA296;
+	border-radius: 0px;
+	border-color: #ffffff;
 }
