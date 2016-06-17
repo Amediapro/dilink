@@ -53,21 +53,19 @@ body {
 }
 
 .logo {
-	margin-top: 2%;
-	left: 0;
 	margin-left: 0px;
+	left: 0;
+	width: 15%;
 }
 
 .nav {
 	text-align: center;
-	left: 20%;
 }
 
 .nav-bar {
 	list-style: none;
 	display: inline-block;
 	bottom: 0;
-	position: absolute;
 }
 
 .header-text-btn {
@@ -162,7 +160,10 @@ body {
 	margin-top: 10px;
 }
 
-.main-nav {
-	margin: 0 auto;
+.nav-wrap {
+	margin-top: 2%;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 0;
 	width: 80%;
 }
