@@ -8,10 +8,10 @@ body {
 .cont {
 	background-position: center;
 	background-origin: content-box;
-	background-image: -webkit-linear-gradient(270deg,rgba(187,151,118,1.00) 49.74%,rgba(255,0,0,0.00) 100%), url(../img/v_sochi_ustanavlivajut_specialnye_turisticheskie_telefonnye_apparaty.jpg);
-	background-image: -moz-linear-gradient(270deg,rgba(187,151,118,1.00) 49.74%,rgba(255,0,0,0.00) 100%), url(../img/v_sochi_ustanavlivajut_specialnye_turisticheskie_telefonnye_apparaty.jpg);
-	background-image: -o-linear-gradient(270deg,rgba(187,151,118,1.00) 49.74%,rgba(255,0,0,0.00) 100%), url(../img/v_sochi_ustanavlivajut_specialnye_turisticheskie_telefonnye_apparaty.jpg);
-	background-image: linear-gradient(180deg,rgba(187,151,118,1.00) 49.74%,rgba(255,0,0,0.00) 100%), url(../img/v_sochi_ustanavlivajut_specialnye_turisticheskie_telefonnye_apparaty.jpg);
+	background-image: -webkit-linear-gradient(270deg,rgba(187,151,118,1.00) 49.74%,rgba(255,0,0,0.00) 100%), url(../img/body_bg_1.png);
+	background-image: -moz-linear-gradient(270deg,rgba(187,151,118,1.00) 49.74%,rgba(255,0,0,0.00) 100%), url(../img/body_bg_1.png);
+	background-image: -o-linear-gradient(270deg,rgba(187,151,118,1.00) 49.74%,rgba(255,0,0,0.00) 100%), url(../img/body_bg_1.png);
+	background-image: linear-gradient(180deg,rgba(187,151,118,1.00) 49.74%,rgba(255,0,0,0.00) 100%), url(../img/body_bg_1.png);
 	background-size: 100%;
 	margin: 0;
 	padding: 0;
