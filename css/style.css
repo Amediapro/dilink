@@ -281,16 +281,83 @@ body {
 
 .block-clients img {
 	padding: 2%;
-}.map img {
+}
+
+.map img {
 	width: 100%;
 	padding-top: 5%;
-
 }
+
 .discount {
-	background-image: -webkit-linear-gradient(270deg,rgba(187,151,118,0.82) 0%,rgba(187,151,118,0.79) 100%), url(../img/v_sochi_ustanavlivajut_specialnye_turisticheskie_telefonnye_apparaty.jpg);
-	background-image: -moz-linear-gradient(270deg,rgba(187,151,118,0.82) 0%,rgba(187,151,118,0.79) 100%), url(../img/v_sochi_ustanavlivajut_specialnye_turisticheskie_telefonnye_apparaty.jpg);
-	background-image: -o-linear-gradient(270deg,rgba(187,151,118,0.82) 0%,rgba(187,151,118,0.79) 100%), url(../img/v_sochi_ustanavlivajut_specialnye_turisticheskie_telefonnye_apparaty.jpg);
-	background-image: linear-gradient(180deg,rgba(187,151,118,0.82) 0%,rgba(187,151,118,0.79) 100%), url(../img/v_sochi_ustanavlivajut_specialnye_turisticheskie_telefonnye_apparaty.jpg);
+	background-image: -webkit-linear-gradient(270deg, rgba(187, 151, 118, 0.82)
+		0%, rgba(187, 151, 118, 0.79) 100%),
+		url(../img/v_sochi_ustanavlivajut_specialnye_turisticheskie_telefonnye_apparaty.jpg);
+	background-image: -moz-linear-gradient(270deg, rgba(187, 151, 118, 0.82)
+		0%, rgba(187, 151, 118, 0.79) 100%),
+		url(../img/v_sochi_ustanavlivajut_specialnye_turisticheskie_telefonnye_apparaty.jpg);
+	background-image: -o-linear-gradient(270deg, rgba(187, 151, 118, 0.82)
+		0%, rgba(187, 151, 118, 0.79) 100%),
+		url(../img/v_sochi_ustanavlivajut_specialnye_turisticheskie_telefonnye_apparaty.jpg);
+	background-image: linear-gradient(180deg, rgba(187, 151, 118, 0.82) 0%,
+		rgba(187, 151, 118, 0.79) 100%),
+		url(../img/v_sochi_ustanavlivajut_specialnye_turisticheskie_telefonnye_apparaty.jpg);
 	background-position: center;
 	background-size: 100%;
+}
+
+.footer {
+	margin-top: 5%;
+}
+
+.form {
+	margin-left: 10%;
+	width: 25%;
+	padding-top: 5%;
+	padding-bottom: 5%;
+}
+
+.form-horizontal {
+	border-color: #000000;
+	border-style: outset;
+	text-align: center;
+	border-radius: 3%;
+	background-color: #574a76;
+}
+
+.form-horizontal p {
+	padding: 10%;
+	color: #ffffff;
+}
+
+.form-input {
+	padding-top: 5%;
+	padding-right: 20%;
+	padding-left: 20%;
+	padding-bottom: 5%;
+}
+
+.form-control {
+	border-radius: 0;
+}
+
+.input-group-addon {
+	border-radius: 0;
+}
+
+.btn-discount {
+	text-transform: uppercase;
+	background: #96b69a;
+	border: 1px outset #FFFFFF;
+	border-radius: 0;
+	color: #ffffff;
+}
+
+.col {
+	float: left;
+	margin-left: 1.85%;
+	width: 21%;
+	padding-right: 5%;
+	padding-left: 5%;
+	margin-right: 1.85%;
+	text-align: center;
 }
