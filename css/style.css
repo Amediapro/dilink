@@ -281,4 +281,16 @@ body {
 
 .block-clients img {
 	padding: 2%;
+}.map img {
+	width: 100%;
+	padding-top: 5%;
+
+}
+.discount {
+	background-image: -webkit-linear-gradient(270deg,rgba(187,151,118,0.82) 0%,rgba(187,151,118,0.79) 100%), url(../img/v_sochi_ustanavlivajut_specialnye_turisticheskie_telefonnye_apparaty.jpg);
+	background-image: -moz-linear-gradient(270deg,rgba(187,151,118,0.82) 0%,rgba(187,151,118,0.79) 100%), url(../img/v_sochi_ustanavlivajut_specialnye_turisticheskie_telefonnye_apparaty.jpg);
+	background-image: -o-linear-gradient(270deg,rgba(187,151,118,0.82) 0%,rgba(187,151,118,0.79) 100%), url(../img/v_sochi_ustanavlivajut_specialnye_turisticheskie_telefonnye_apparaty.jpg);
+	background-image: linear-gradient(180deg,rgba(187,151,118,0.82) 0%,rgba(187,151,118,0.79) 100%), url(../img/v_sochi_ustanavlivajut_specialnye_turisticheskie_telefonnye_apparaty.jpg);
+	background-position: center;
+	background-size: 100%;
 }
