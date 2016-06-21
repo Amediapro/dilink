@@ -71,8 +71,8 @@
 		<div class="col-md-8">
 
 			<div class="col-md-4 col-right">
-				<img src="img/Как-купить-в-интернет-магазине2.jpg"
-					class="img-circle" width="200" height="200" alt="" />
+				<img src="img/photo_2016-06-21_13-58-17.jpg" class="img-circle"
+					width="100%" height="100%" alt="" />
 			</div>
 			<h1 class="head-title">РОЗНИЧНАЯ И ИНТЕРНЕТ-ТОРГОВЛЯ</h1>
 			<p>Когда цены и ассортимент у розничных компаний практически
@@ -149,30 +149,60 @@
 				отслеживанием статуса и качества исполнения заявок.</p>
 		</div>
 		<div class="col-md-3">
-			<div class="contact">
-				<img src="img/chatting-oval-speech-bubbles.png" alt="" /><span>Обратная
-					связь</span>
-				<p class="glyphicon glyphicon-chevron-down"></p>
-			</div>
-			<div class="collapse">
-				<p>Контакт №1</p>
-				<p>Контакт №2</p>
-				<p>Контакт №3</p>
-			</div>
-			<div class="accordion">
-				<div class="first">
-					<span>Интренет магазинам</span>
+			<div class="collapse-back">
+				<div class="contact">
+					<img src="img/chatting-oval-speech-bubbles.png" alt="" /><span>Обратная
+						связь</span>
 					<p class="glyphicon glyphicon-chevron-down"></p>
 				</div>
-				<div class="collapse" id="collapse1">какой-то текст</div>
-				<div class="m-accordion">
+				<div class="collapse">
+					<p>Контакт №1</p>
+					<p>Контакт №2</p>
+					<p>Контакт №3</p>
+				</div>
+			</div>
+<!-- 			<div class="panel-group accordion-back" id="accordion"> -->
+<!-- 				<div class="panel panel-default" id="type_panel_1"> -->
+<!-- 					<a data-toggle="collapse" data-parent="#accordion" -->
+<!-- 						href="#collapseOne"> Пункт Группы Свертывания #1 </a> -->
+<!-- 					<div id="collapseOne" -->
+<!-- 						class="panel-collapse collapse in collapse_no_bg"> -->
+<!-- 						<div class="panel-body"></div> -->
+<!-- 					</div> -->
+<!-- 				</div> -->
+<!-- 				<div class="panel panel-default" id="type_panel_2"> -->
+<!-- 					<a data-toggle="collapse" data-parent="#accordion" -->
+<!-- 						href="#collapseTwo"> Пункт Группы Свертывания #2 </a> -->
+<!-- 					<div id="collapseTwo" -->
+<!-- 						class="panel-collapse collapse collapse_no_bg"> -->
+<!-- 						<div class="panel-body"></div> -->
+<!-- 					</div> -->
+<!-- 				</div> -->
+<!-- 				<div class="panel panel-default" id="type_panel_3"> -->
+<!-- 					<a data-toggle="collapse" data-parent="#accordion" -->
+<!-- 						href="#collapseThree"> Пункт Группы Свертывания #3 </a> -->
+<!-- 					<div id="collapseThree" -->
+<!-- 						class="panel-collapse collapse collapse_no_bg"> -->
+<!-- 						<div class="panel-body"></div> -->
+<!-- 					</div> -->
+<!-- 				</div> -->
+<!-- 			</div> -->
+			<div class="accordion-back">
+				<div class="first">
+					<span">Интренет магазинам</span>
+					<p class="glyphicon glyphicon-chevron-down first"></p>
+				</div>
+				<div class="collapse collapse_no_bg" id="first">какой-то текс</div>
+				<div class="midle">
 					<span>Малому бизнесу</span>
 					<p class="glyphicon glyphicon-chevron-down"></p>
 				</div>
-				<div class="l-accordion">
+				<div class="collapse collapse_no_bg" id="midle">какой-то текс</div>
+				<div class="last">
 					<span>Крупному бизнесу</span>
 					<p class="glyphicon glyphicon-chevron-down"></p>
 				</div>
+				<div class="collapse collapse_no_bg" id="last">какой-то текс</div>
 			</div>
 		</div>
 		<script>
@@ -200,6 +230,21 @@
 													$(".collapse").collapse(
 															'toggle');
 												});
+								$(".first").click(function(){
+							        $("#first").collapse('toggle');
+							        $("#midle").collapse('hide');
+							        $("#last").collapse('hide');
+							    });
+								$(".midle").click(function(){
+									$("#first").collapse('hide');
+							        $("#midle").collapse('toggle');
+							        $("#last").collapse('hide');
+							    });
+								$(".last").click(function(){
+									$("#first").collapse('hide');
+									$("#midle").collapse('hide');
+							        $("#last").collapse('toggle');
+							    });
 							});
 		</script>
 	</div>
