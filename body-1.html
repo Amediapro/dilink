@@ -161,182 +161,202 @@
 					<p>Контакт №3</p>
 				</div>
 			</div>
-<!-- 			<div class="panel-group accordion-back" id="accordion"> -->
-<!-- 				<div class="panel panel-default" id="type_panel_1"> -->
-<!-- 					<a data-toggle="collapse" data-parent="#accordion" -->
-<!-- 						href="#collapseOne"> Пункт Группы Свертывания #1 </a> -->
-<!-- 					<div id="collapseOne" -->
-<!-- 						class="panel-collapse collapse in collapse_no_bg"> -->
-<!-- 						<div class="panel-body"></div> -->
-<!-- 					</div> -->
-<!-- 				</div> -->
-<!-- 				<div class="panel panel-default" id="type_panel_2"> -->
-<!-- 					<a data-toggle="collapse" data-parent="#accordion" -->
-<!-- 						href="#collapseTwo"> Пункт Группы Свертывания #2 </a> -->
-<!-- 					<div id="collapseTwo" -->
-<!-- 						class="panel-collapse collapse collapse_no_bg"> -->
-<!-- 						<div class="panel-body"></div> -->
-<!-- 					</div> -->
-<!-- 				</div> -->
-<!-- 				<div class="panel panel-default" id="type_panel_3"> -->
-<!-- 					<a data-toggle="collapse" data-parent="#accordion" -->
-<!-- 						href="#collapseThree"> Пункт Группы Свертывания #3 </a> -->
-<!-- 					<div id="collapseThree" -->
-<!-- 						class="panel-collapse collapse collapse_no_bg"> -->
-<!-- 						<div class="panel-body"></div> -->
-<!-- 					</div> -->
-<!-- 				</div> -->
-<!-- 			</div> -->
+			<!-- 			<div class="panel-group accordion-back" id="accordion"> -->
+			<!-- 				<div class="panel panel-default" id="type_panel_1"> -->
+			<!-- 					<a data-toggle="collapse" data-parent="#accordion" -->
+			<!-- 						href="#collapseOne"> Пункт Группы Свертывания #1 </a> -->
+			<!-- 					<div id="collapseOne" -->
+			<!-- 						class="panel-collapse collapse in collapse_no_bg"> -->
+			<!-- 						<div class="panel-body"></div> -->
+			<!-- 					</div> -->
+			<!-- 				</div> -->
+			<!-- 				<div class="panel panel-default" id="type_panel_2"> -->
+			<!-- 					<a data-toggle="collapse" data-parent="#accordion" -->
+			<!-- 						href="#collapseTwo"> Пункт Группы Свертывания #2 </a> -->
+			<!-- 					<div id="collapseTwo" -->
+			<!-- 						class="panel-collapse collapse collapse_no_bg"> -->
+			<!-- 						<div class="panel-body"></div> -->
+			<!-- 					</div> -->
+			<!-- 				</div> -->
+			<!-- 				<div class="panel panel-default" id="type_panel_3"> -->
+			<!-- 					<a data-toggle="collapse" data-parent="#accordion" -->
+			<!-- 						href="#collapseThree"> Пункт Группы Свертывания #3 </a> -->
+			<!-- 					<div id="collapseThree" -->
+			<!-- 						class="panel-collapse collapse collapse_no_bg"> -->
+			<!-- 						<div class="panel-body"></div> -->
+			<!-- 					</div> -->
+			<!-- 				</div> -->
+			<!-- 			</div> -->
 			<div class="accordion-back">
 				<div class="first">
-					<span">Интренет магазинам</span>
-					<p class="glyphicon glyphicon-chevron-down first"></p>
+					<span>Интернет магазинам</span>
+					<p class="glyphicon glyphicon-chevron-down"></p>
+					<div class="collapse collapse_no_bg" id="first">
+						<p>Услуга №1</p>
+						<p>Услуга №2</p>
+						<p>Услуга №3</p>
+						<p>Услуга №4</p>
+						<p>Услуга №5</p>
+					</div>
 				</div>
-				<div class="collapse collapse_no_bg" id="first">какой-то текс</div>
+
 				<div class="midle">
 					<span>Малому бизнесу</span>
 					<p class="glyphicon glyphicon-chevron-down"></p>
+					<div class="collapse collapse_no_bg" id="midle">
+						<p>Услуга №1</p>
+						<p>Услуга №2</p>
+						<p>Услуга №3</p>
+						<p>Услуга №4</p>
+						<p>Услуга №5</p>
+					</div>
 				</div>
-				<div class="collapse collapse_no_bg" id="midle">какой-то текс</div>
+
 				<div class="last">
 					<span>Крупному бизнесу</span>
 					<p class="glyphicon glyphicon-chevron-down"></p>
-				</div>
-				<div class="collapse collapse_no_bg" id="last" >
-				<div id="last-collapse">какой-то текс</div>
+					<div class="collapse collapse_no_bg" id="last">
+						<div id="last-collapse">
+							<p>Услуга №1</p>
+							<p>Услуга №2</p>
+							<p>Услуга №3</p>
+							<p>Услуга №4</p>
+							<p>Услуга №5</p>
+						</div>
+					</div>
 				</div>
 			</div>
+			<script>
+				$(document)
+						.ready(
+								function() {
+									$(".contact")
+											.click(
+													function() {
+														if ($('.contact p')
+																.hasClass(
+																		'glyphicon-chevron-down')) {
+															$(".glyphicon")
+																	.removeClass(
+																			"glyphicon glyphicon-chevron-down")
+																	.addClass(
+																			" 	glyphicon glyphicon-chevron-up");
+														} else {
+															$(".glyphicon")
+																	.removeClass(
+																			" 	glyphicon glyphicon-chevron-up")
+																	.addClass(
+																			"glyphicon glyphicon-chevron-down");
+														}
+														$(".collapse")
+																.collapse(
+																		'toggle');
+													});
+									$(".first").click(function() {
+										$("#first").collapse('toggle');
+										$("#midle").collapse('hide');
+										$("#last").collapse('hide');
+									});
+									$(".midle").click(function() {
+										$("#first").collapse('hide');
+										$("#midle").collapse('toggle');
+										$("#last").collapse('hide');
+									});
+									$(".last").click(function() {
+										$("#first").collapse('hide');
+										$("#midle").collapse('hide');
+										$("#last").collapse('toggle');
+									});
+								});
+			</script>
 		</div>
-		<script>
-			$(document)
-					.ready(
-							function() {
-								$(".contact")
-										.click(
-												function() {
-													if ($('.contact p')
-															.hasClass(
-																	'glyphicon-chevron-down')) {
-														$(".glyphicon")
-																.removeClass(
-																		"glyphicon glyphicon-chevron-down")
-																.addClass(
-																		" 	glyphicon glyphicon-chevron-up");
-													} else {
-														$(".glyphicon")
-																.removeClass(
-																		" 	glyphicon glyphicon-chevron-up")
-																.addClass(
-																		"glyphicon glyphicon-chevron-down");
-													}
-													$(".collapse").collapse(
-															'toggle');
-												});
-								$(".first").click(function(){
-							        $("#first").collapse('toggle');
-							        $("#midle").collapse('hide');
-							        $("#last").collapse('hide');
-							    });
-								$(".midle").click(function(){
-									$("#first").collapse('hide');
-							        $("#midle").collapse('toggle');
-							        $("#last").collapse('hide');
-							    });
-								$(".last").click(function(){
-									$("#first").collapse('hide');
-									$("#midle").collapse('hide');
-							        $("#last").collapse('toggle');
-							    });
-							});
-		</script>
-	</div>
-	<footer>
-		<div class="footer">
-			<div class="col">
-				<h3>Информация</h3>
-				<p>
-					<a>О нас</a>
-				</p>
-				<p>
-					<a>Услуги</a>
-				</p>
-				<p>
-					<a>События</a>
-				</p>
-				<p>
-					<a>Контакты</a>
-				</p>
-			</div>
-			<div class="col">
-				<h3>Входящие услуги</h3>
-				<p>
-					<a>Какая-то услуга №1</a>
-				</p>
-				<p>
-					<a>Какая-то услуга №2</a>
-				</p>
-				<p>
-					<a>Какая-то услуга №3</a>
-				</p>
-				<p>
-					<a>Какая-то услуга №4</a>
-				</p>
-				<p>
-					<a>Какая-то услуга №5</a>
-				</p>
-			</div>
-			<div class="col">
-				<h3>Исходящие услуги</h3>
-				<p>
-					<a>Какая-то услуга №1</a>
-				</p>
-				<p>
-					<a>Какая-то услуга №2</a>
-				</p>
-				<p>
-					<a>Какая-то услуга №3</a>
-				</p>
-				<p>
-					<a>Какая-то услуга №4</a>
-				</p>
-				<p>
-					<a>Какая-то услуга №5</a>
-				</p>
-			</div>
+		<footer>
+			<div class="footer">
+				<div class="col">
+					<h3>Информация</h3>
+					<p>
+						<a>О нас</a>
+					</p>
+					<p>
+						<a>Услуги</a>
+					</p>
+					<p>
+						<a>События</a>
+					</p>
+					<p>
+						<a>Контакты</a>
+					</p>
+				</div>
+				<div class="col">
+					<h3>Входящие услуги</h3>
+					<p>
+						<a>Какая-то услуга №1</a>
+					</p>
+					<p>
+						<a>Какая-то услуга №2</a>
+					</p>
+					<p>
+						<a>Какая-то услуга №3</a>
+					</p>
+					<p>
+						<a>Какая-то услуга №4</a>
+					</p>
+					<p>
+						<a>Какая-то услуга №5</a>
+					</p>
+				</div>
+				<div class="col">
+					<h3>Исходящие услуги</h3>
+					<p>
+						<a>Какая-то услуга №1</a>
+					</p>
+					<p>
+						<a>Какая-то услуга №2</a>
+					</p>
+					<p>
+						<a>Какая-то услуга №3</a>
+					</p>
+					<p>
+						<a>Какая-то услуга №4</a>
+					</p>
+					<p>
+						<a>Какая-то услуга №5</a>
+					</p>
+				</div>
 
-			<div class="col">
-				<h3>Прочее</h3>
-				<p>
-					<a>Какая-то услуга №1</a>
-				</p>
-				<p>
-					<a>Какая-то услуга №2</a>
-				</p>
-				<p>
-					<a>Какая-то услуга №3</a>
-				</p>
-				<p>
-					<a>Какая-то услуга №4</a>
-				</p>
-				<p>
-					<a>Какая-то услуга №5</a>
-				</p>
+				<div class="col">
+					<h3>Прочее</h3>
+					<p>
+						<a>Какая-то услуга №1</a>
+					</p>
+					<p>
+						<a>Какая-то услуга №2</a>
+					</p>
+					<p>
+						<a>Какая-то услуга №3</a>
+					</p>
+					<p>
+						<a>Какая-то услуга №4</a>
+					</p>
+					<p>
+						<a>Какая-то услуга №5</a>
+					</p>
+				</div>
+				<hr>
+				<div class="copyright">
+					<p class="text-muted">
+					<p class="text-muted">ООО «Дилинк» © Все права защищены</p>
+				</div>
+				<div class="social">
+					<a href="#" class="sb min twitter">Twitter</a> <a href="#"
+						class="sb min facebook">Facebook</a> <a href="#"
+						class="sb min heart">Heart</a> <a href="#" class="sb min linkedin">LinkedIn</a>
+					<a href="#" class="sb min pinterest">Pinterest</a> <a href="#"
+						class="sb min podcast">Podcast</a> <a href="#" class="sb min rss">RSS</a>
+					<a href="#" class="sb min share_this">Share</a> <a href="#"
+						class="sb min star">Star</a> <a href="#" class="sb min vimeo">Vimeo</a>
+				</div>
 			</div>
-			<hr>
-			<div class="copyright">
-				<p class="text-muted">
-				<p class="text-muted">ООО «Дилинк» © Все права защищены</p>
-			</div>
-			<div class="social">
-				<a href="#" class="sb min twitter">Twitter</a> <a href="#"
-					class="sb min facebook">Facebook</a> <a href="#"
-					class="sb min heart">Heart</a> <a href="#" class="sb min linkedin">LinkedIn</a>
-				<a href="#" class="sb min pinterest">Pinterest</a> <a href="#"
-					class="sb min podcast">Podcast</a> <a href="#" class="sb min rss">RSS</a>
-				<a href="#" class="sb min share_this">Share</a> <a href="#"
-					class="sb min star">Star</a> <a href="#" class="sb min vimeo">Vimeo</a>
-			</div>
-		</div>
-	</footer>
+		</footer>
 </body>
 </html>
