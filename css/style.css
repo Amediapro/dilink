@@ -1,30 +1,45 @@
+/*   
+Theme Name: Dilink
+Version: 2.0
+Description: Тема сайта ДИЛИНК
+Author: AlfaWebStudio
+Author URI: http://amedia.pro/
+*/
 @CHARSET "UTF-8";
 
 body {
 	font-family: Lato;
-	font-size: 14px;
+	font-size: 16px;
 	background-color: #BB9776;
 }
 
-.header {
-	background-position: center;
-	background-origin: content-box;
-	background-image: -webkit-linear-gradient(270deg,rgba(187,151,118,1.00) 45.08%,rgba(187,151,118,0.65) 60.62%,rgba(223,219,213,0.44) 78.76%,rgba(223,219,213,1.00) 87.57%), url(../img/body_bg_1.png);
-	background-image: -moz-linear-gradient(270deg,rgba(187,151,118,1.00) 45.08%,rgba(187,151,118,0.65) 60.62%,rgba(223,219,213,0.44) 78.76%,rgba(223,219,213,1.00) 87.57%), url(../img/body_bg_1.png);
-	background-image: -o-linear-gradient(270deg,rgba(187,151,118,1.00) 45.08%,rgba(187,151,118,0.65) 60.62%,rgba(223,219,213,0.44) 78.76%,rgba(223,219,213,1.00) 87.57%), url(../img/body_bg_1.png);
-	background-image: linear-gradient(180deg,rgba(187,151,118,1.00) 45.08%,rgba(187,151,118,0.65) 60.62%,rgba(223,219,213,0.44) 78.76%,rgba(223,219,213,1.00) 87.57%), url(../img/body_bg_1.png);
-	background-size: 100%;
-	margin: 0;
-	padding: 0;
-	overflow: hidden;
-}
+	.header {
+		background-position: center;
+		background-origin: content-box;
+		background-image: -webkit-linear-gradient(270deg, rgba(187, 151, 118, 1.00)
+			22.28%, rgba(187, 151, 118, 0.65) 34.20%, rgba(223, 219, 213, 0.44)
+			78.76%, rgba(223, 219, 213, 1.00) 87.57%), url(img/body_bg_1.png);
+		background-image: -moz-linear-gradient(270deg, rgba(187, 151, 118, 1.00)
+			22.28%, rgba(187, 151, 118, 0.65) 34.20%, rgba(223, 219, 213, 0.44)
+			78.76%, rgba(223, 219, 213, 1.00) 87.57%), url(img/body_bg_1.png);
+		background-image: -o-linear-gradient(270deg, rgba(187, 151, 118, 1.00)
+			22.28%, rgba(187, 151, 118, 0.65) 34.20%, rgba(223, 219, 213, 0.44)
+			78.76%, rgba(223, 219, 213, 1.00) 87.57%), url(img/body_bg_1.png);
+		background-image: linear-gradient(180deg, rgba(187, 151, 118, 1.00)
+			22.28%, rgba(187, 151, 118, 0.65) 34.20%, rgba(223, 219, 213, 0.44)
+			78.76%, rgba(223, 219, 213, 1.00) 87.57%), url(img/body_bg_1.png);
+		background-size: 110%;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+	}
 
-.upper-line {
-	background: #3b372e;
-	position: static;
-	margin-top: 0;
-	padding: 6px 0;
-}
+		.upper-line {
+			background: #3b372e;
+			position: static;
+			margin-top: 0;
+			padding: 6px 0;
+		}
 
 .upper-line a {
 	color: #ffffff;
@@ -60,19 +75,82 @@ body {
 	text-align: center;
 	width: 60%;
 	margin-bottom: 0;
-	font-size: 1.711em;
+	font-size: 1.3em;
 	padding-top: 20px;
+	text-transform: uppercase;
+}
+.navigation ul li:first-child:before{
+	content: none;
+}
+.navigation ul li{
+	padding:0 5px;
+}
+.navigation>ul>li:before{
+	content: "";
+    width: 1px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.6);
+    display: inline-block;
+    position: absolute;
+    left: 0;
+}
+.navigation>ul>li>a{
+	padding: 0 25px;
+}
+.navigation>ul>li>a:hover{
+	background-color: rgba(175, 162, 150, 0.75);
+}
+.navigation>ul>li>a:hover:before{
+	content: "";
+    width: 9px;
+    height: 9px;
+    background: url(img/contour_top_left.png) 0 0 no-repeat;
+    display: inline-block;
+    position: absolute;
+    top: -1px;
+    left: -1px;
+}
+.navigation>ul>li>a:hover > span:before{
+	content: "";
+    width: 9px;
+    height: 9px;
+    background: url(img/contour_bottom_left.png) 0 0 no-repeat;
+    display: inline-block;
+    position: absolute;
+    bottom: -1px;
+    left: -1px;
+}
+
+.navigation>ul>li>a:hover:after{
+	content: "";
+    width: 9px;
+    height: 9px;
+    background: url(img/contour_top_right.png) 0 0 no-repeat;
+    display: inline-block;
+    position: absolute;
+    top: -1px;
+    right: -1px;
+}
+.navigation>ul>li>a:hover > span:after{
+	content: "";
+    width: 9px;
+    height: 9px;
+    background: url(img/contour_bottom_right.png) 0 0 no-repeat;
+    display: inline-block;
+    position: absolute;
+    bottom: -1px;
+    right: -1px;
 }
 
 .main_nav-control-panel {
 	float: left;
 	width: 20%;
-	padding-top: 30px;
+	padding-top: 15px;
 }
 
 .btn .btn-default {
-	background-image: url(../img/btn.png);
-	background-color: #BBA48E;
+	background-image: url(img/btn.png);
+	background-color: #AFA296;
 }
 
 .main_nav {
@@ -95,52 +173,26 @@ body {
 	margin-top: 60px;
 	margin-bottom: 10px;
 }
-.header-text-btn-grey {
-	display: inline-block;
-	position: relative;
-	margin-top: 60px;
-	margin-bottom: 10px;
-}
 
 .header-text-btn:before {
 	content: "";
-	width: 170px;
-	height: 2px;
-	display: inline-block;
-	background: rgba(255, 255, 255, 0.2);
-	position: absolute;
-	left: -200px;
-	top: 20px;
-}
-.header-text-btn-grey:before {
-	content: "";
-	width: 170px;
+	width: 200px;
 	height: 1px;
 	display: inline-block;
-	background: #bb9877;
+	background: rgba(255, 255, 255, 0.9);
 	position: absolute;
-	left: -200px;
+	left: -250px;
 	top: 20px;
 }
 
 .header-text-btn:after {
 	content: "";
-	width: 170px;
-	height: 2px;
-	display: inline-block;
-	background: rgba(255, 255, 255, 0.2);
-	position: absolute;
-	right: -200px;
-	top: 20px;
-}
-.header-text-btn-grey:after {
-	content: "";
-	width: 170px;
+	width: 200px;
 	height: 1px;
 	display: inline-block;
-	background: #bb9877;
+	background: rgba(255, 255, 255, 0.9);
 	position: absolute;
-	right: -200px;
+	right: -250px;
 	top: 20px;
 }
 
@@ -169,16 +221,16 @@ body {
 .content-wraper {
 	background-image: -webkit-linear-gradient(270deg, rgba(187, 151, 118, 1.00)
 		67.36%, rgba(255, 255, 255, 0.00) 100%),
-		url(../img/v_sochi_ustanavlivajut_specialnye_turisticheskie_telefonnye_apparaty.jpg);
+		url(img/v_sochi_ustanavlivajut_specialnye_turisticheskie_telefonnye_apparaty.jpg);
 	background-image: -moz-linear-gradient(270deg, rgba(187, 151, 118, 1.00)
 		67.36%, rgba(255, 255, 255, 0.00) 100%),
-		url(../img/v_sochi_ustanavlivajut_specialnye_turisticheskie_telefonnye_apparaty.jpg);
+		url(img/v_sochi_ustanavlivajut_specialnye_turisticheskie_telefonnye_apparaty.jpg);
 	background-image: -o-linear-gradient(270deg, rgba(187, 151, 118, 1.00)
 		67.36%, rgba(255, 255, 255, 0.00) 100%),
-		url(../img/v_sochi_ustanavlivajut_specialnye_turisticheskie_telefonnye_apparaty.jpg);
+		url(img/v_sochi_ustanavlivajut_specialnye_turisticheskie_telefonnye_apparaty.jpg);
 	background-image: linear-gradient(180deg, rgba(187, 151, 118, 1.00)
 		67.36%, rgba(255, 255, 255, 0.00) 100%),
-		url(../img/v_sochi_ustanavlivajut_specialnye_turisticheskie_telefonnye_apparaty.jpg);
+		url(img/v_sochi_ustanavlivajut_specialnye_turisticheskie_telefonnye_apparaty.jpg);
 	width: 100%;
 	height: 30%;
 }
@@ -186,7 +238,40 @@ body {
 .bg-image {
 	
 }
-
+.bread_combs{
+				width:100%;
+			}
+			.breadcrumb{
+				padding:0 15px;
+				border-bottom: 1px #cccccc ridge;
+				border-top: 1px #cccccc ridge;
+				border-radius: 0;
+				text-align: center;
+			}
+			.breadcrumb li a {
+				display: inline-block;
+				padding-right: 30px;
+				padding-left: 16px;
+				line-height: 44px;
+				color: #485158;
+				font-size: 1em;
+				background: url("img/bс_arrow.png") no-repeat right top;
+				text-overflow: ellipsis;
+				overflow: hidden;
+				white-space: nowrap;
+				vertical-align: bottom;
+			}
+			.breadcrumb .active {
+				display: inline-block;
+				padding-right: 30px;
+				padding-left: 16px;
+				line-height: 44px;
+				font-size: 1em;
+				text-overflow: ellipsis;
+				overflow: hidden;
+				white-space: nowrap;
+				vertical-align: bottom;
+			}
 .container-fluid {
 	height: 100%;
 	padding: 0;
@@ -230,9 +315,12 @@ body {
 
 .btn-default {
 	color: #ffffff;
-	background-color: #AFA296;
+	background-color: rgba(175, 162, 150, 0.75);
 	border-radius: 0px;
 	border-color: #ffffff;
+	font-size: 1.2em;
+    padding: 10px 50px;
+	text-transform: uppercase;
 }
 
 .box {
@@ -254,6 +342,7 @@ body {
 .layout img {
 	height: 64px;
 	width: 64px;
+	margin-bottom: 10px;
 }
 
 .layout {
@@ -264,10 +353,18 @@ body {
 	margin-bottom: 0;
 	width: 80%;
 }
-
+.box h4 {
+	text-transform: uppercase;
+}
 .box a {
+	display: inline-block;
+	width: 100%;
+	text-align: center;
 	color: #ffffff;
-	padding-top: 3%;
+	padding: 10px 0;
+}
+.box button {
+	margin-top: 30px;
 }
 
 .nav-bar a {
@@ -279,7 +376,6 @@ body {
 }
 
 .nav-bar li:hover {
-	background-color: #E8D5B1;
 }
 
 .body-text-wraper {
@@ -309,16 +405,16 @@ body {
 .discount {
 	background-image: -webkit-linear-gradient(270deg, rgba(187, 151, 118, 0.82)
 		0%, rgba(187, 151, 118, 0.79) 100%),
-		url(../img/v_sochi_ustanavlivajut_specialnye_turisticheskie_telefonnye_apparaty.jpg);
+		url(img/v_sochi_ustanavlivajut_specialnye_turisticheskie_telefonnye_apparaty.jpg);
 	background-image: -moz-linear-gradient(270deg, rgba(187, 151, 118, 0.82)
 		0%, rgba(187, 151, 118, 0.79) 100%),
-		url(../img/v_sochi_ustanavlivajut_specialnye_turisticheskie_telefonnye_apparaty.jpg);
+		url(img/v_sochi_ustanavlivajut_specialnye_turisticheskie_telefonnye_apparaty.jpg);
 	background-image: -o-linear-gradient(270deg, rgba(187, 151, 118, 0.82)
 		0%, rgba(187, 151, 118, 0.79) 100%),
-		url(../img/v_sochi_ustanavlivajut_specialnye_turisticheskie_telefonnye_apparaty.jpg);
+		url(img/v_sochi_ustanavlivajut_specialnye_turisticheskie_telefonnye_apparaty.jpg);
 	background-image: linear-gradient(180deg, rgba(187, 151, 118, 0.82) 0%,
 		rgba(187, 151, 118, 0.79) 100%),
-		url(../img/v_sochi_ustanavlivajut_specialnye_turisticheskie_telefonnye_apparaty.jpg);
+		url(img/v_sochi_ustanavlivajut_specialnye_turisticheskie_telefonnye_apparaty.jpg);
 	background-position: center;
 	background-size: 100%;
 }
@@ -329,8 +425,6 @@ body {
 	padding-right: 5%;
 	padding-left: 5%;
 	float: none;
-	border-top-color: #333333;
-	border-top-width: 5px;
 }
 
 .form {
@@ -338,13 +432,13 @@ body {
 	width: 25%;
 	padding-top: 5%;
 	padding-bottom: 5%;
-	margin-top: 0px;
 }
 
 .form-horizontal {
+	border-color: #000000;
+	border-style: outset;
 	text-align: center;
 	border-radius: 3%;
-	padding: 10%;
 	background-color: #574a76;
 }
 
@@ -387,15 +481,6 @@ body {
 	margin-bottom: 2%;
 }
 
-.col h3 {
-	color: #fff;
-	text-transform: uppercase;
-}
-
-.col a {
-	color: #CCCCCC;
-}
-
 .footer hr {
 	width: 80%;
 	float: none;
@@ -412,10 +497,8 @@ body {
 	padding-left: 5%;
 }
 
-
 footer {
-	border-top: 5px solid #333333;
-
+	border-width: 5px;
 }
 
 .container {
@@ -445,69 +528,51 @@ footer {
 	padding-bottom: 2%;
 }
 
-.left_col_date .request_date {
-	margin-top: 30px;
-}
-
-.left_col_date .request_date .date_wraper {
-	margin: 0 auto;
-}
-
-.date_wraper:after {
-	content: '';
-	display: block;
-	width: 0;
-	height: 0;
-	border-style: solid;
-	border-width: 11px 0 11px 11px;
-	border-color: transparent transparent transparent #D3A35B;
-	position: absolute;
-	right: -11px;
-	top: 17px;
-}
-
-#day {
-	display: block;
-	width: 100%;
-	height: 68px;
-	background: #D3A35B;
-	font-size: 2.5em;
-	line-height: 68px;
-	color: #fff;
-	text-align: center;
-}
-
-#year_month {
-	display: block;
-	width: 100%;
-	height: 59px;
-	background: #3e454c;
-	padding-top: 7px;
-	box-sizing: border-box;
-	text-align: center;
-}
-
-#month {
-	color: #858a8e;
-	text-transform: uppercase;
-}
-
-#year {
-	color: #fff;
-	font-size: 0.9375;
-}
-
-.breadcrumb {
-	border-radius: 0;
-	background-color: #dfdbd5;
-	border-width: medium;
-	border-color: #000000;
-}
-
-.nav-dread {
-	border: medium #000000;
-}
-
+							.date_wraper{
+								display: block;
+								height: 136px;
+								width: 68px;
+								position: relative;
+							}
+							.date_wraper:after{
+								content: '';
+								display: block;
+								width: 0;
+								height: 0;
+								border-style: solid;
+								border-width: 11px 0 11px 11px;
+								border-color: transparent transparent transparent #D3A35B;
+								position: absolute;
+								right: -11px;
+								top: 17px;
+							}
+								#day{
+									display:block;
+									width:100%;
+									height: 68px;
+									background: #D3A35B;
+									font-size: 2.5em;
+									line-height: 68px;
+									color: #fff;
+									text-align: center;
+								}
+								#year_month{
+									display:block;
+									width:100%;
+									height: 59px;
+									background: #3e454c;
+									padding-top: 7px;
+									box-sizing: border-box;
+									text-align: center;
+								}
+									#month{
+										color: #858a8e;
+										text-transform: uppercase;
+									}
+									#year{
+										color: #fff;
+										font-size: 0.9375;
+									}
 .contact {
 	/* [disabled]padding-bottom: 5%; */
 	/* [disabled]background: #594888; */
@@ -541,16 +606,16 @@ footer {
 .accordion .first {
 	background-image: -webkit-linear-gradient(270deg, rgba(89, 72, 136, 0.49)
 		0%, rgba(89, 72, 136, 0.55) 100%),
-		url(../img/%D0%9A%D0%B0%D0%BA-%D0%BA%D1%83%D0%BF%D0%B8%D1%82%D1%8C-%D0%B2-%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82-%D0%BC%D0%B0%D0%B3%D0%B0%D0%B7%D0%B8%D0%BD%D0%B52.jpg);
+		url(img/%D0%9A%D0%B0%D0%BA-%D0%BA%D1%83%D0%BF%D0%B8%D1%82%D1%8C-%D0%B2-%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82-%D0%BC%D0%B0%D0%B3%D0%B0%D0%B7%D0%B8%D0%BD%D0%B52.jpg);
 	background-image: -moz-linear-gradient(270deg, rgba(89, 72, 136, 0.49)
 		0%, rgba(89, 72, 136, 0.55) 100%),
-		url(../img/%D0%9A%D0%B0%D0%BA-%D0%BA%D1%83%D0%BF%D0%B8%D1%82%D1%8C-%D0%B2-%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82-%D0%BC%D0%B0%D0%B3%D0%B0%D0%B7%D0%B8%D0%BD%D0%B52.jpg);
+		url(img/%D0%9A%D0%B0%D0%BA-%D0%BA%D1%83%D0%BF%D0%B8%D1%82%D1%8C-%D0%B2-%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82-%D0%BC%D0%B0%D0%B3%D0%B0%D0%B7%D0%B8%D0%BD%D0%B52.jpg);
 	background-image: -o-linear-gradient(270deg, rgba(89, 72, 136, 0.49) 0%,
 		rgba(89, 72, 136, 0.55) 100%),
-		url(../img/%D0%9A%D0%B0%D0%BA-%D0%BA%D1%83%D0%BF%D0%B8%D1%82%D1%8C-%D0%B2-%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82-%D0%BC%D0%B0%D0%B3%D0%B0%D0%B7%D0%B8%D0%BD%D0%B52.jpg);
+		url(img/%D0%9A%D0%B0%D0%BA-%D0%BA%D1%83%D0%BF%D0%B8%D1%82%D1%8C-%D0%B2-%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82-%D0%BC%D0%B0%D0%B3%D0%B0%D0%B7%D0%B8%D0%BD%D0%B52.jpg);
 	background-image: linear-gradient(180deg, rgba(89, 72, 136, 0.49) 0%,
 		rgba(89, 72, 136, 0.55) 100%),
-		url(../img/%D0%9A%D0%B0%D0%BA-%D0%BA%D1%83%D0%BF%D0%B8%D1%82%D1%8C-%D0%B2-%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82-%D0%BC%D0%B0%D0%B3%D0%B0%D0%B7%D0%B8%D0%BD%D0%B52.jpg);
+		url(img/%D0%9A%D0%B0%D0%BA-%D0%BA%D1%83%D0%BF%D0%B8%D1%82%D1%8C-%D0%B2-%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82-%D0%BC%D0%B0%D0%B3%D0%B0%D0%B7%D0%B8%D0%BD%D0%B52.jpg);
 	background-size: 100% 100%;
 	background-position: center;
 }
@@ -589,18 +654,10 @@ footer {
 .first {
 	min-height: 100px;
 	max-height: 195px;
-	background-image: -webkit-linear-gradient(270deg, rgba(30, 30, 31, 0.56)
-		0%, rgba(30, 30, 31, 0.58) 100%),
-		url(../img/%D0%9A%D0%B0%D0%BA-%D0%BA%D1%83%D0%BF%D0%B8%D1%82%D1%8C-%D0%B2-%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82-%D0%BC%D0%B0%D0%B3%D0%B0%D0%B7%D0%B8%D0%BD%D0%B52.jpg);
-	background-image: -moz-linear-gradient(270deg, rgba(30, 30, 31, 0.56) 0%,
-		rgba(30, 30, 31, 0.58) 100%),
-		url(../img/%D0%9A%D0%B0%D0%BA-%D0%BA%D1%83%D0%BF%D0%B8%D1%82%D1%8C-%D0%B2-%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82-%D0%BC%D0%B0%D0%B3%D0%B0%D0%B7%D0%B8%D0%BD%D0%B52.jpg);
-	background-image: -o-linear-gradient(270deg, rgba(30, 30, 31, 0.56) 0%,
-		rgba(30, 30, 31, 0.58) 100%),
-		url(../img/%D0%9A%D0%B0%D0%BA-%D0%BA%D1%83%D0%BF%D0%B8%D1%82%D1%8C-%D0%B2-%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82-%D0%BC%D0%B0%D0%B3%D0%B0%D0%B7%D0%B8%D0%BD%D0%B52.jpg);
-	background-image: linear-gradient(180deg, rgba(30, 30, 31, 0.56) 0%,
-		rgba(30, 30, 31, 0.58) 100%),
-		url(../img/%D0%9A%D0%B0%D0%BA-%D0%BA%D1%83%D0%BF%D0%B8%D1%82%D1%8C-%D0%B2-%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82-%D0%BC%D0%B0%D0%B3%D0%B0%D0%B7%D0%B8%D0%BD%D0%B52.jpg);
+	background-image: -webkit-linear-gradient(270deg,rgba(30, 30, 31,0.56) 0%,rgba(30, 30, 31, 0.58) 100%), url(img/%D0%9A%D0%B0%D0%BA-%D0%BA%D1%83%D0%BF%D0%B8%D1%82%D1%8C-%D0%B2-%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82-%D0%BC%D0%B0%D0%B3%D0%B0%D0%B7%D0%B8%D0%BD%D0%B52.jpg);
+	background-image: -moz-linear-gradient(270deg,rgba(30, 30, 31,0.56) 0%,rgba(30, 30, 31, 0.58) 100%), url(img/%D0%9A%D0%B0%D0%BA-%D0%BA%D1%83%D0%BF%D0%B8%D1%82%D1%8C-%D0%B2-%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82-%D0%BC%D0%B0%D0%B3%D0%B0%D0%B7%D0%B8%D0%BD%D0%B52.jpg);
+	background-image: -o-linear-gradient(270deg,rgba(30, 30, 31,0.56) 0%,rgba(30, 30, 31, 0.58) 100%), url(img/%D0%9A%D0%B0%D0%BA-%D0%BA%D1%83%D0%BF%D0%B8%D1%82%D1%8C-%D0%B2-%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82-%D0%BC%D0%B0%D0%B3%D0%B0%D0%B7%D0%B8%D0%BD%D0%B52.jpg);
+	background-image: linear-gradient(180deg,rgba(30, 30, 31,0.56) 0%,rgba(30, 30, 31, 0.58) 100%), url(img/%D0%9A%D0%B0%D0%BA-%D0%BA%D1%83%D0%BF%D0%B8%D1%82%D1%8C-%D0%B2-%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82-%D0%BC%D0%B0%D0%B3%D0%B0%D0%B7%D0%B8%D0%BD%D0%B52.jpg);
 	padding: 3%;
 	color: #fff;
 }
@@ -612,16 +669,10 @@ footer {
 .midle {
 	min-height: 100px;
 	max-height: 195px;
-	background-image: -webkit-linear-gradient(270deg, rgba(89, 72, 136, 0.58)
-		0%, rgba(89, 72, 136, 0.58) 100%),
-		url(../img/bdda6472-36bbfa0a0a2.jpg);
-	background-image: -moz-linear-gradient(270deg, rgba(89, 72, 136, 0.58)
-		0%, rgba(89, 72, 136, 0.58) 100%),
-		url(../img/bdda6472-36bbfa0a0a2.jpg);
-	background-image: -o-linear-gradient(270deg, rgba(89, 72, 136, 0.58) 0%,
-		rgba(89, 72, 136, 0.58) 100%), url(../img/bdda6472-36bbfa0a0a2.jpg);
-	background-image: linear-gradient(180deg, rgba(89, 72, 136, 0.58) 0%,
-		rgba(89, 72, 136, 0.58) 100%), url(../img/bdda6472-36bbfa0a0a2.jpg);
+	background-image: -webkit-linear-gradient(270deg,rgba(89,72,136,0.58) 0%,rgba(89,72,136,0.58) 100%), url(img/bdda6472-36bbfa0a0a2.jpg);
+	background-image: -moz-linear-gradient(270deg,rgba(89,72,136,0.58) 0%,rgba(89,72,136,0.58) 100%), url(img/bdda6472-36bbfa0a0a2.jpg);
+	background-image: -o-linear-gradient(270deg,rgba(89,72,136,0.58) 0%,rgba(89,72,136,0.58) 100%), url(img/bdda6472-36bbfa0a0a2.jpg);
+	background-image: linear-gradient(180deg,rgba(89,72,136,0.58) 0%,rgba(89,72,136,0.58) 100%), url(img/bdda6472-36bbfa0a0a2.jpg);
 	padding: 3%;
 	color: #fff;
 }
@@ -632,14 +683,10 @@ footer {
 
 .last {
 	background-repeat: no-repeat;
-	background-image: -webkit-linear-gradient(270deg, rgba(30, 30, 31, 0.58)
-		0%, rgba(30, 30, 31, 0.58) 100%), url(../img/13image2.jpg);
-	background-image: -moz-linear-gradient(270deg, rgba(30, 30, 31, 0.58) 0%,
-		rgba(30, 30, 31, 0.58) 100%), url(../img/13image2.jpg);
-	background-image: -o-linear-gradient(270deg, rgba(30, 30, 31, 0.58) 0%,
-		rgba(30, 30, 31, 0.58) 100%), url(../img/13image2.jpg);
-	background-image: linear-gradient(180deg, rgba(30, 30, 31, 0.58) 0%,
-		rgba(30, 30, 31, 0.58) 100%), url(../img/13image2.jpg);
+	background-image: -webkit-linear-gradient(270deg,rgba(30, 30, 31,0.58) 0%,rgba(30, 30, 31,0.58) 100%), url(img/13image2.jpg);
+	background-image: -moz-linear-gradient(270deg,rgba(30, 30, 31,0.58) 0%,rgba(30, 30, 31,0.58) 100%), url(img/13image2.jpg);
+	background-image: -o-linear-gradient(270deg,rgba(30, 30, 31,0.58) 0%,rgba(30, 30, 31,0.58) 100%), url(img/13image2.jpg);
+	background-image: linear-gradient(180deg,rgba(30, 30, 31,0.58) 0%,rgba(30, 30, 31,0.58) 100%), url(img/13image2.jpg);
 	min-height: 100px;
 	max-height: 200px;
 	padding: 3%;
@@ -649,32 +696,131 @@ footer {
 #last {
 	max-height: 176px;
 }
-
 .accordion-back span {
 	text-align: center;
 }
 
-.black-icon {
+
+
+
+
+@media (min-width: 979px) { 
+	ul.nav li.dropdown.show-on-hover:hover > ul.dropdown-menu { /* для раскрывания субменю по наведению */
+		display: block;
+	}
+	.comment-list .children { /* для комментов */
+		padding: 0;
+		margin-left: 74px;
+		padding-bottom: 15px;
+	}
+	.comment-list .media {
+		margin-top: 0;
+	}
+}
+
+/* =WordPress Core
+-------------------------------------------------------------- */
+.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+.aligncenter,
+div.aligncenter {
+    display: block;
+    margin: 5px auto 5px auto;
+}
+
+.alignright {
+    float: right;
+    margin: 5px 0 20px 20px;
+}
+
+.alignleft {
+    float: left;
+    margin: 5px 20px 20px 0;
+}
+
+a img.alignright {
+    float: right;
+    margin: 5px 0 20px 20px;
+}
+
+a img.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+a img.alignleft {
+    float: left;
+    margin: 5px 20px 20px 0;
+}
+
+a img.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.wp-caption {
+    background: #fff;
+    border: 1px solid #f0f0f0;
+    max-width: 96%; /* Image does not overflow the content area */
+    padding: 5px 3px 10px;
+    text-align: center;
+}
+
+.wp-caption.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignleft {
+    margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignright {
+    margin: 5px 0 20px 20px;
+}
+
+.wp-caption img {
+    border: 0 none;
+    height: auto;
+    margin: 0;
+    max-width: 98.5%;
+    padding: 0;
+    width: auto;
+}
+
+.wp-caption p.wp-caption-text {
+    font-size: 11px;
+    line-height: 17px;
+    margin: 0;
+    padding: 0 4px 5px;
+}
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	color: #21759b;
 	display: block;
-	width: 64;
-	height: 64;
-	background-image: url(../img/headset-for-call-service.png),
-		-webkit-linear-gradient(270deg, rgba(0, 0, 0, 1.00) 0%,
-		rgba(0, 0, 0, 1.00) 100%);
-	background-image: url(../img/headset-for-call-service.png),
-		-moz-linear-gradient(270deg, rgba(0, 0, 0, 1.00) 0%,
-		rgba(0, 0, 0, 1.00) 100%);
-	background-image: url(../img/headset-for-call-service.png),
-		-o-linear-gradient(270deg, rgba(0, 0, 0, 1.00) 0%, rgba(0, 0, 0, 1.00)
-		100%);
-	background-image: url(../img/headset-for-call-service.png),
-		linear-gradient(180deg, rgba(0, 0, 0, 1.00) 0%, rgba(0, 0, 0, 1.00)
-		100%);
-}.bg-form {
-	background-image: none, -webkit-linear-gradient(270deg,rgba(242,238,239,1.00) 3.63%,rgba(227,169,180,1.00) 10.36%,rgba(236,183,195,1.00) 19.69%,rgba(242,241,241,1.00) 31.09%,rgba(209,235,243,1.00) 41.45%,rgba(196,233,245,1.00) 58.03%,rgba(241,242,243,1.00) 66.83%,rgba(239,193,203,1.00) 75.13%,rgba(244,124,131,0.93) 84.97%,rgba(241,242,243,1.00) 96.89%);
-	background-image: none, -moz-linear-gradient(270deg,rgba(242,238,239,1.00) 3.63%,rgba(227,169,180,1.00) 10.36%,rgba(236,183,195,1.00) 19.69%,rgba(242,241,241,1.00) 31.09%,rgba(209,235,243,1.00) 41.45%,rgba(196,233,245,1.00) 58.03%,rgba(241,242,243,1.00) 66.83%,rgba(239,193,203,1.00) 75.13%,rgba(244,124,131,0.93) 84.97%,rgba(241,242,243,1.00) 96.89%);
-	background-image: none, -o-linear-gradient(270deg,rgba(242,238,239,1.00) 3.63%,rgba(227,169,180,1.00) 10.36%,rgba(236,183,195,1.00) 19.69%,rgba(242,241,241,1.00) 31.09%,rgba(209,235,243,1.00) 41.45%,rgba(196,233,245,1.00) 58.03%,rgba(241,242,243,1.00) 66.83%,rgba(239,193,203,1.00) 75.13%,rgba(244,124,131,0.93) 84.97%,rgba(241,242,243,1.00) 96.89%);
-	border-radius: 3%;
-	padding: 2%;
-	background-image: none, linear-gradient(180deg,rgba(242,238,239,1.00) 3.63%,rgba(227,169,180,1.00) 10.36%,rgba(236,183,195,1.00) 19.69%,rgba(242,241,241,1.00) 31.09%,rgba(209,235,243,1.00) 41.45%,rgba(196,233,245,1.00) 58.03%,rgba(241,242,243,1.00) 66.83%,rgba(239,193,203,1.00) 75.13%,rgba(244,124,131,0.93) 84.97%,rgba(241,242,243,1.00) 96.89%);
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000; /* Above WP toolbar. */
 }
