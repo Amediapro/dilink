@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Untitled Document</title>
+<!-- Bootstrap -->
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/social-buttons.css" rel="stylesheet" type="text/css">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+		  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="js/jquery-1.11.3.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.js"></script>
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="upper-line row">
+			<span class="site-types"><a href="#">Частным клиентам</a> | <a
+				href="#" class="active">Бизнесу</a></span> <span class="company-phone">8-800-444-444-44
+				| 95-95-59</span>
+		</div>
+		<div class="row main_nav">
+			<div class="logo">
+				<img src="img/logo.png">
+			</div>
+			<div class="navigation">
+				<ul class="nav nav-bar">
+					<li><a href="index.html">О Нас</a></li>
+					<li><a href="body-1.html">Услуги</a></li>
+					<li><a href="body-2.html" class="active">События</a></li>
+					<li><a href="#">Контакты</a></li>
+				</ul>
+			</div>
+			<div class="main_nav-control-panel">
+				<a href="#"><img src="img/searching-tool-outline.png" alt="" /></a>
+				<a href="#"><img
+					src="img/lock-outlined-padlock-symbol-for-security-interface.png"
+					alt="" /></a>
+			</div>
+		</div>
+	</div>
+	<div class="nav-dread">
+		<ul class="breadcrumb">
+			<li><a href="#">Главная</a></li>
+			<li><a href="#">Раздел</a></li>
+			<li class="active">Текущая статья</li>
+		</ul>
+	</div>
+	<div class="container">
+
+		<div class="col-md-9 row">
+			<div class="col-md-10 col-md-offset-2">
+				<h1 class="text-center">Услуги входящей связи</h1>
+				<hr>
+			</div>
+			<div class="col-md-1">
+		    <img src="img/headset-1.png" width="64" height="64" alt=""/> </div>
+			<div class="col-md-11">
+				<h3>Какая-то услуга №1</h3>
+				<p>А тут идет краткое описание супер услуги</p>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="collapse-back">
+				<div class="contact">
+					<img src="img/chatting-oval-speech-bubbles.png" alt="" /><span>Обратная
+						связь</span>
+					<p class="glyphicon glyphicon-chevron-down"></p>
+				</div>
+				<div class="collapse">
+					<p>Контакт №1</p>
+					<p>Контакт №2</p>
+					<p>Контакт №3</p>
+				</div>
+			</div>
+			<div class="accordion-back">
+				<div class="first">
+					<span>Интернет магазинам</span>
+					<p class="glyphicon glyphicon-chevron-down"></p>
+					<div class="collapse collapse_no_bg" id="first">
+						<p>Услуга №1</p>
+						<p>Услуга №2</p>
+						<p>Услуга №3</p>
+						<p>Услуга №4</p>
+						<p>Услуга №5</p>
+					</div>
+				</div>
+
+				<div class="midle">
+					<span>Малому бизнесу</span>
+					<p class="glyphicon glyphicon-chevron-down"></p>
+					<div class="collapse collapse_no_bg" id="midle">
+						<p>Услуга №1</p>
+						<p>Услуга №2</p>
+						<p>Услуга №3</p>
+						<p>Услуга №4</p>
+						<p>Услуга №5</p>
+					</div>
+				</div>
+
+				<div class="last">
+					<span>Крупному бизнесу</span>
+					<p class="glyphicon glyphicon-chevron-down"></p>
+					<div class="collapse collapse_no_bg" id="last">
+						<div id="last-collapse">
+							<p>Услуга №1</p>
+							<p>Услуга №2</p>
+							<p>Услуга №3</p>
+							<p>Услуга №4</p>
+							<p>Услуга №5</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<script>
+				$(document)
+						.ready(
+								function() {
+									$(".contact")
+											.click(
+													function() {
+														if ($('.contact p')
+																.hasClass(
+																		'glyphicon-chevron-down')) {
+															$(".glyphicon")
+																	.removeClass(
+																			"glyphicon glyphicon-chevron-down")
+																	.addClass(
+																			" 	glyphicon glyphicon-chevron-up");
+														} else {
+															$(".glyphicon")
+																	.removeClass(
+																			" 	glyphicon glyphicon-chevron-up")
+																	.addClass(
+																			"glyphicon glyphicon-chevron-down");
+														}
+														$(".collapse")
+																.collapse(
+																		'toggle');
+													});
+									$(".first").click(function() {
+										$("#first").collapse('toggle');
+										$("#midle").collapse('hide');
+										$("#last").collapse('hide');
+									});
+									$(".midle").click(function() {
+										$("#first").collapse('hide');
+										$("#midle").collapse('toggle');
+										$("#last").collapse('hide');
+									});
+									$(".last").click(function() {
+										$("#first").collapse('hide');
+										$("#midle").collapse('hide');
+										$("#last").collapse('toggle');
+									});
+								});
+			</script>
+		</div>
+	</div>
+	<footer>
+		<div class="footer">
+			<div class="col">
+				<h3>Информация</h3>
+				<p>
+					<a>О нас</a>
+				</p>
+				<p>
+					<a>Услуги</a>
+				</p>
+				<p>
+					<a>События</a>
+				</p>
+				<p>
+					<a>Контакты</a>
+				</p>
+			</div>
+			<div class="col">
+				<h3>Входящие услуги</h3>
+				<p>
+					<a>Какая-то услуга №1</a>
+				</p>
+				<p>
+					<a>Какая-то услуга №2</a>
+				</p>
+				<p>
+					<a>Какая-то услуга №3</a>
+				</p>
+				<p>
+					<a>Какая-то услуга №4</a>
+				</p>
+				<p>
+					<a>Какая-то услуга №5</a>
+				</p>
+			</div>
+			<div class="col">
+				<h3>Исходящие услуги</h3>
+				<p>
+					<a>Какая-то услуга №1</a>
+				</p>
+				<p>
+					<a>Какая-то услуга №2</a>
+				</p>
+				<p>
+					<a>Какая-то услуга №3</a>
+				</p>
+				<p>
+					<a>Какая-то услуга №4</a>
+				</p>
+				<p>
+					<a>Какая-то услуга №5</a>
+				</p>
+			</div>
+
+			<div class="col">
+				<h3>Прочее</h3>
+				<p>
+					<a>Какая-то услуга №1</a>
+				</p>
+				<p>
+					<a>Какая-то услуга №2</a>
+				</p>
+				<p>
+					<a>Какая-то услуга №3</a>
+				</p>
+				<p>
+					<a>Какая-то услуга №4</a>
+				</p>
+				<p>
+					<a>Какая-то услуга №5</a>
+				</p>
+			</div>
+			<hr>
+			<div class="copyright">
+				<p class="text-muted">
+				<p class="text-muted">ООО «Дилинк» © Все права защищены</p>
+			</div>
+			<div class="social">
+				<a href="#" class="sb min twitter">Twitter</a> <a href="#"
+					class="sb min facebook">Facebook</a> <a href="#"
+					class="sb min heart">Heart</a> <a href="#" class="sb min linkedin">LinkedIn</a>
+				<a href="#" class="sb min pinterest">Pinterest</a> <a href="#"
+					class="sb min podcast">Podcast</a> <a href="#" class="sb min rss">RSS</a>
+				<a href="#" class="sb min share_this">Share</a> <a href="#"
+					class="sb min star">Star</a> <a href="#" class="sb min vimeo">Vimeo</a>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>
