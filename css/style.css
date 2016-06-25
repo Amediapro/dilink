@@ -355,6 +355,7 @@ body {
 	text-transform: uppercase;
 }
 
+
 .box {
 	border: 1px solid #ffffff;
 	color: #ffffff;
@@ -460,6 +461,7 @@ body {
 	padding-right: 5%;
 	padding-left: 5%;
 	float: none;
+	color: #fff;
 }
 
 .footer>.col>h3 {
@@ -479,8 +481,6 @@ body {
 }
 
 .form-horizontal {
-	border-color: #000000;
-	border-style: outset;
 	text-align: center;
 	border-radius: 3%;
 	background-color: #574a76;
@@ -766,6 +766,10 @@ footer {
 .accordion-back span {
 	text-align: center;
 }
+.col a {
+	color: #dedbe0;
+}
+
 
 @media ( min-width : 979px) {
 	ul.nav li.dropdown.show-on-hover:hover>ul.dropdown-menu {
