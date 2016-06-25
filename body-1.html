@@ -153,9 +153,9 @@
 				<div class="contact">
 					<img src="img/chatting-oval-speech-bubbles.png" alt="" /><span>Обратная
 						связь</span>
-					<p class="glyphicon glyphicon-chevron-down"></p>
+					<p class="glyphicon glyphicon-chevron-down" id="glContact"></p>
 				</div>
-				<div class="collapse">
+				<div class="collapse" id="contact">
 					<p>Контакт №1</p>
 					<p>Контакт №2</p>
 					<p>Контакт №3</p>
@@ -164,7 +164,7 @@
 			<div class="accordion-back">
 				<div class="first">
 					<span>Интернет магазинам</span>
-					<p class="glyphicon glyphicon-chevron-down"></p>
+					<p class="glyphicon glyphicon-chevron-down" id="glFirst"></p>
 					<div class="collapse collapse_no_bg" id="first">
 						<p>Услуга №1</p>
 						<p>Услуга №2</p>
@@ -176,7 +176,7 @@
 
 				<div class="midle">
 					<span>Малому бизнесу</span>
-					<p class="glyphicon glyphicon-chevron-down"></p>
+					<p class="glyphicon glyphicon-chevron-down" id="glMidle"></p>
 					<div class="collapse collapse_no_bg" id="midle">
 						<p>Услуга №1</p>
 						<p>Услуга №2</p>
@@ -188,7 +188,7 @@
 
 				<div class="last">
 					<span>Крупному бизнесу</span>
-					<p class="glyphicon glyphicon-chevron-down"></p>
+					<p class="glyphicon glyphicon-chevron-down" id="glLast"></p>
 					<div class="collapse collapse_no_bg" id="last">
 						<div id="last-collapse">
 							<p>Услуга №1</p>
@@ -210,37 +210,150 @@
 														if ($('.contact p')
 																.hasClass(
 																		'glyphicon-chevron-down')) {
-															$(".glyphicon")
+															$("#glContact")
 																	.removeClass(
 																			"glyphicon glyphicon-chevron-down")
 																	.addClass(
 																			" 	glyphicon glyphicon-chevron-up");
 														} else {
-															$(".glyphicon")
+															$("#glContact")
 																	.removeClass(
 																			" 	glyphicon glyphicon-chevron-up")
 																	.addClass(
 																			"glyphicon glyphicon-chevron-down");
 														}
-														$(".collapse")
-																.collapse(
-																		'toggle');
+														$("#contact").collapse(
+																'toggle');
 													});
-									$(".first").click(function() {
-										$("#first").collapse('toggle');
-										$("#midle").collapse('hide');
-										$("#last").collapse('hide');
-									});
-									$(".midle").click(function() {
-										$("#first").collapse('hide');
-										$("#midle").collapse('toggle');
-										$("#last").collapse('hide');
-									});
-									$(".last").click(function() {
-										$("#first").collapse('hide');
-										$("#midle").collapse('hide');
-										$("#last").collapse('toggle');
-									});
+									$(".first")
+											.click(
+													function() {
+														if ($('.midle p')
+																.hasClass(
+																		'glyphicon-chevron-up')
+																|| $('.last p')
+																		.hasClass(
+																				'glyphicon-chevron-up')) {
+															$("#glMidle")
+																	.removeClass(
+																			"glyphicon glyphicon-chevron-up")
+																	.addClass(
+																			" 	glyphicon glyphicon-chevron-down");
+															$("#glLast")
+																	.removeClass(
+																			"glyphicon glyphicon-chevron-up")
+																	.addClass(
+																			" 	glyphicon glyphicon-chevron-down");
+														}
+														;
+														if ($('.first p')
+																.hasClass(
+																		'glyphicon-chevron-down')) {
+															$("#glFirst")
+																	.removeClass(
+																			"glyphicon glyphicon-chevron-down")
+																	.addClass(
+																			" 	glyphicon glyphicon-chevron-up");
+														} else {
+															$("#glFirst")
+																	.removeClass(
+																			" 	glyphicon glyphicon-chevron-up")
+																	.addClass(
+																			"glyphicon glyphicon-chevron-down");
+														}
+														$("#first").collapse(
+																'toggle');
+														$("#midle").collapse(
+																'hide');
+														$("#last").collapse(
+																'hide');
+													});
+									$(".midle")
+											.click(
+													function() {
+														if ($('.first p')
+																.hasClass(
+																		'glyphicon-chevron-up')
+																|| $('.last p')
+																		.hasClass(
+																				'glyphicon-chevron-up')) {
+															$("#glFirst")
+																	.removeClass(
+																			"glyphicon glyphicon-chevron-up")
+																	.addClass(
+																			" 	glyphicon glyphicon-chevron-down");
+															$("#glLast")
+																	.removeClass(
+																			"glyphicon glyphicon-chevron-up")
+																	.addClass(
+																			" 	glyphicon glyphicon-chevron-down");
+														}
+														;
+														if ($('.midle p')
+																.hasClass(
+																		'glyphicon-chevron-down')) {
+															$("#glMidle")
+																	.removeClass(
+																			"glyphicon glyphicon-chevron-down")
+																	.addClass(
+																			" 	glyphicon glyphicon-chevron-up");
+														} else {
+															$("#glMidle")
+																	.removeClass(
+																			" 	glyphicon glyphicon-chevron-up")
+																	.addClass(
+																			"glyphicon glyphicon-chevron-down");
+														}
+														$("#first").collapse(
+																'hide');
+														$("#midle").collapse(
+																'toggle');
+														$("#last").collapse(
+																'hide');
+													});
+									$(".last")
+											.click(
+													function() {
+														if ($('.first p')
+																.hasClass(
+																		'glyphicon-chevron-up')
+																|| $('.midle p')
+																		.hasClass(
+																				'glyphicon-chevron-up')) {
+															$("#glFirst")
+																	.removeClass(
+																			"glyphicon glyphicon-chevron-up")
+																	.addClass(
+																			" 	glyphicon glyphicon-chevron-down");
+															$("#glMidle")
+																	.removeClass(
+																			"glyphicon glyphicon-chevron-up")
+																	.addClass(
+																			" 	glyphicon glyphicon-chevron-down");
+														}
+														;
+														if ($('.last p')
+																.hasClass(
+																		'glyphicon-chevron-down')) {
+															$("#glLast")
+																	.removeClass(
+																			"glyphicon glyphicon-chevron-down")
+																	.addClass(
+																			" 	glyphicon glyphicon-chevron-up");
+														} else {
+															$("#glLast")
+																	.removeClass(
+																			" 	glyphicon glyphicon-chevron-up")
+																	.addClass(
+																			"glyphicon glyphicon-chevron-down");
+														}
+														$("#first").collapse(
+																'hide');
+														$("#midle").collapse(
+																'hide');
+														$("#last").collapse(
+																'toggle');
+													});
 								});
 			</script>
 		</div>
